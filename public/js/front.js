@@ -1924,7 +1924,27 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'MyHeader'
+  name: 'MyHeader',
+  data: function data() {
+    return {
+      links: [{
+        label: 'Home',
+        link: '#'
+      }, {
+        label: 'Blog',
+        link: '#'
+      }, {
+        label: 'About Us',
+        link: '#'
+      }, {
+        label: 'Contact',
+        link: '#'
+      }, {
+        label: 'Administration Area',
+        link: '#'
+      }]
+    };
+  }
 });
 
 /***/ }),
@@ -2009,21 +2029,38 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _vm._m(0);
+  return _c("header", [_c("nav", {
+    staticClass: "navbar navbar-expand-lg navbar-dark bg-dark"
+  }, [_c("a", {
+    staticClass: "navbar-brand",
+    attrs: {
+      href: "#"
+    }
+  }, [_vm._v("Boolpress")]), _vm._v(" "), _vm._m(0), _vm._v(" "), _c("div", {
+    staticClass: "collapse navbar-collapse",
+    attrs: {
+      id: "navbarSupportedContent"
+    }
+  }, [_c("ul", {
+    staticClass: "navbar-nav mr-auto"
+  }, _vm._l(_vm.links, function (link, index) {
+    return _c("li", {
+      key: index,
+      staticClass: "nav-item active"
+    }, [_c("a", {
+      staticClass: "nav-link",
+      attrs: {
+        href: link.link
+      }
+    }, [_vm._v(_vm._s(link.label))])]);
+  }), 0)])])]);
 };
 
 var staticRenderFns = [function () {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _c("header", [_c("nav", {
-    staticClass: "navbar navbar-expand-lg navbar-light bg-light"
-  }, [_c("a", {
-    staticClass: "navbar-brand",
-    attrs: {
-      href: "#"
-    }
-  }, [_vm._v("Boolpress")]), _vm._v(" "), _c("button", {
+  return _c("button", {
     staticClass: "navbar-toggler",
     attrs: {
       type: "button",
@@ -2035,49 +2072,7 @@ var staticRenderFns = [function () {
     }
   }, [_c("span", {
     staticClass: "navbar-toggler-icon"
-  })]), _vm._v(" "), _c("div", {
-    staticClass: "collapse navbar-collapse",
-    attrs: {
-      id: "navbarSupportedContent"
-    }
-  }, [_c("ul", {
-    staticClass: "navbar-nav mr-auto"
-  }, [_c("li", {
-    staticClass: "nav-item active"
-  }, [_c("a", {
-    staticClass: "nav-link",
-    attrs: {
-      href: "#"
-    }
-  }, [_vm._v("Home")])]), _vm._v(" "), _c("li", {
-    staticClass: "nav-item active"
-  }, [_c("a", {
-    staticClass: "nav-link",
-    attrs: {
-      href: "#"
-    }
-  }, [_vm._v("Blog")])]), _vm._v(" "), _c("li", {
-    staticClass: "nav-item active"
-  }, [_c("a", {
-    staticClass: "nav-link",
-    attrs: {
-      href: "#"
-    }
-  }, [_vm._v("About Us")])]), _vm._v(" "), _c("li", {
-    staticClass: "nav-item active"
-  }, [_c("a", {
-    staticClass: "nav-link",
-    attrs: {
-      href: "#"
-    }
-  }, [_vm._v("Contact")])]), _vm._v(" "), _c("li", {
-    staticClass: "nav-item active"
-  }, [_c("a", {
-    staticClass: "nav-link",
-    attrs: {
-      href: "#"
-    }
-  }, [_vm._v("Area amministrazione")])])])])])]);
+  })]);
 }];
 render._withStripped = true;
 
