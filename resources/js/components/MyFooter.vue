@@ -1,5 +1,7 @@
 <template>
-  
+    <footer class="bg-dark navbar-dark">
+        
+    </footer>
 </template>
 
 <script>
