@@ -17,9 +17,9 @@
             </div>
         @endif
 
-        <h1 class="border-bottom">Post Detail {{$post->id}}</h1>
+        <h1 class="border-bottom m-5">Post Detail {{$post->id}}</h1>
         <div class="maxi_container d-flex align-items-center justify-content-between">
-            <div class="square px-3 mx-2 py-1 bg-dark d-flex justify-content-center align-items-center flex-column">
+            <div class="card px-3 mx-2 py-1 bg-dark d-flex justify-content-center flex-column">
                 <ul class="list-unstyled pt-5 d-flex justify-content-center  flex-column">
                     <li class="text-secondary py-1"><strong class="text-white">Title:</strong> {{$post->title}}</li>
                     <li class="py-1 text-secondary"><strong class="text-white">Slug:</strong> {{$post->slug}}</li>
@@ -29,7 +29,7 @@
                             {{$tag->name}};
                         @endforeach
                     </li> 
-                    <li class="py-1 text-secondary"><strong class="text-white">Description:</strong> {{$post->description}}</li>
+                    <li class="py-1 li_text text-secondary"><strong class="text-white">Description:</strong> {{$post->description}}</li>
                     
                     <li class="d-flex py-3 ">
                         <a class="btn btn-warning mx-2" href="{{route('admin.posts.edit', ['post' => $post])}}">Edit</a>
