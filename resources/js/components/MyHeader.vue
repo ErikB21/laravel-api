@@ -50,5 +50,7 @@
   </script>
   
   <style scoped lang="scss">
-  
+    header{
+        height: 10vh;
+    }
   </style>
