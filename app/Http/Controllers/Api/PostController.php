@@ -16,7 +16,7 @@ class PostController extends Controller
     public function index()
     {
         $posts = Post::with(['category', 'tags'])->paginate(3);
-
+        
         foreach($posts as $post){
             if($post->cover){
                 $post->cover = asset('storage/' . $post->cover);
@@ -24,7 +24,6 @@ class PostController extends Controller
                 $post->cover = asset('images/tree.png');
             }
         }
-
         return response()->json([
             'success' => true,
             'results' => $posts
